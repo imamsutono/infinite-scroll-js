@@ -9,8 +9,8 @@ function infinite(options) {
   }
 
   el.addEventListener('scroll', function() {
-    if ((list.scrollTop + list.clientHeight >= list.scrollHeight) && displayed < data.length) {
-      for (var a = displayed; a < displayed + dataShow; a++) {
+    if ((el.scrollTop + el.clientHeight >= el.scrollHeight) && displayed < data.length) {
+      for (var a = displayed; a < displayed + dataShow - 1; a++) {
         options.onScrollEnd(a);
       }
 
